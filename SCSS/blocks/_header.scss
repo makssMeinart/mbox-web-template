@@ -1,0 +1,153 @@
+.header {
+   position: fixed;
+   width: 100%;
+   height: 70px;
+   top: 15px;
+   z-index: 10;
+}
+.header.active {
+   background-color: rgba($black-color, $alpha: .9);
+}
+
+// Burger menu 
+.burger-menu {
+   position: relative;
+   height: 19px;
+   width: 25px;
+   cursor: pointer;
+   display: none;
+
+   &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $white-color;
+      top: 0;
+      right: 0;
+      transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1) top;
+   }
+
+   span {
+      width: 100%;
+      height: 2px;
+      background-color: $white-color;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: .5s cubic-bezier(0.39, 0.575, 0.565, 1) transform;
+   }
+
+   &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $white-color;
+      bottom: 0;
+      right: 0;
+      transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1) bottom;
+   }
+}
+
+.burger-menu.active {
+
+   span {
+      transform: rotate(45deg);
+   }
+
+   &::before {
+      transform: rotate(45deg);
+      top: 9px;
+   }
+   &::after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+   }
+}
+
+
+
+.header-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menu {
+   display: flex;
+}
+
+.menu-list {
+   display: flex;
+   justify-content: space-between;
+
+   &__item:not(:last-child) {
+      margin-right: 54px;
+   }
+
+   &__link {
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      opacity: 0.5;
+      color: $white-color;
+      transition: .3s linear opacity;
+      padding-bottom: 5px;
+      position: relative;
+
+      &:hover {
+         opacity: 1;
+
+         &::before {
+            width: 100%;
+         }
+      }
+
+      &::before {
+         content: "";
+         width: 0;
+         height: 2px;
+         border-radius: 50px;
+         position: absolute;
+         bottom: 1px;
+         background: $gradient-blue;
+         transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1) width;
+      }
+
+   }
+}
+
+.header-last {
+   display: flex;
+   align-items: center;
+
+   &__item {
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+   }
+
+   &__item:not(:last-child) {
+      margin-right: 65px;
+   }
+
+   &__search {
+      width: 18px;
+      height: 18px;
+      background-image: url(/Images/icons/search.png);
+   }
+
+   &__notification {
+      width: 20px;
+      height: 22px;
+      background-image: url(/Images/icons/bellpng.png);
+   }
+
+   &__user {
+      width: 18px;
+      height: 19.3px;
+      background-image: url(/Images/icons/user.png);
+   }
+
+}

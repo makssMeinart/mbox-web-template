@@ -1,0 +1,33 @@
+.actors-slider__wrapper {
+   height: fit-content;
+   position: relative; 
+}
+
+.actors-next {
+   right: -20px;
+   top: 40%;
+   transform: translateY(-50%);
+}
+
+.slider-actors__item {
+   height: 230px;
+   display: flex !important;
+   flex-direction: column;
+   align-items: center;
+   
+   &-img {
+      height: 190px;
+      width: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+   }
+
+   &-name {
+      font-size: 1.125rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      color: $white-color;
+      text-align: center;
+   }
+}

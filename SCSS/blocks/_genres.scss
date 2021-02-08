@@ -1,0 +1,38 @@
+.title.genres {
+   margin-top: 108px;
+}
+
+.genres-grid {
+   display: flex;
+   flex-wrap: wrap;
+   grid-gap: 26px;
+}
+
+.genres-grid__item {
+   width: 340px;
+   height: 198px;
+   border-radius: 20px;
+   background-color: $white-color;
+
+   // Maybe Not Nessesary link there need to double check with designer
+   &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-decoration: none;
+   }
+
+   &-content {
+      text-align: center;
+
+      &-title {
+         margin-bottom: 0;
+         margin-top: 8px;
+         font-weight: 700;
+         font-size: 1.75rem;
+         line-height: 1.25rem;
+         color: $white-color;
+      }
+   }
+}

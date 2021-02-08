@@ -1,0 +1,99 @@
+@import "../AddOns/functions", "../AddOns/mixins", "../AddOns/variables", "../SCSS/template";
+
+
+// Blocks
+@import "../SCSS/blocks/header";
+@import "../SCSS/blocks/trending-block";
+@import "../SCSS/blocks/title";
+@import "../SCSS/blocks/genres";
+@import "../SCSS/blocks/channeles";
+@import "../SCSS/blocks/actors";
+
+
+// Sections
+@import "../SCSS/sections/hero";
+@import "../SCSS/sections/trending";
+@import "../SCSS/sections/popular";
+@import "../SCSS/sections/banners";
+@import "../SCSS/sections/footer";
+
+
+
+*,*::before,*::after {
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 16px;
+   min-height: 100%;
+}
+
+// font-family: 'Marcellus',
+
+body {
+   background-color: $black-color;
+   color: $primary-color;
+   font-family: 'Mulish', sans-serif;
+   height: 100%;
+}
+
+
+.container {
+   max-width: 1502px;
+   margin: 0 auto;
+   padding: 0 2em;
+}
+
+.primary-btn {
+   font-weight: 800;
+   font-size: 1rem;
+   line-height: 1.25rem;
+   background: $gradient-blue;
+   box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+   border-radius: 100px;
+   border: none;
+   cursor: pointer;
+   color: $white-color;
+   transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1) background;
+
+   &:hover {
+      background: linear-gradient(316.53deg, #1af5e6 13.2%, #2861f3 71.54%);
+   }
+}
+
+.secondary-btn {
+   font-size: 1rem;
+   line-height: 1.25rem;
+   font-weight: 800;
+   background: $white-color;
+   color: #323232;
+   border-radius: 100px;
+   cursor: pointer;
+   border: none;
+   transition: .2s linear background-color;
+
+   &:hover {
+      background: #c6c6c6;
+      color: #000000;
+   }
+}
+
+// Slider Btns
+.slider__next {
+   width: 19px 33px;
+   background: none;
+   position: absolute;
+   border: none;
+   z-index: 10;
+   cursor: pointer;
+}
+
+.sldier__prev {
+   width: 19px 33px;
+   position: absolute;
+   border: none;
+   background-color: none;
+   display: none;
+}
+
+@import "../Mobile/mobile";

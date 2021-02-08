@@ -1,0 +1,31 @@
+.channeles-slider {
+   height: 118px;
+   width: 99%;
+}
+
+.channeles .slick-list .slick-track {
+   max-height: 118px;
+}
+
+
+.channelese-wrapper {
+   position: relative;
+}
+
+.channeles-next {
+   right: -20px;
+   top: 50%;
+   transform: translateY(-50%);
+   display: inline-block !important;
+}
+
+.channeles-slider__item {
+   background-color: $white-color;
+   border-radius: 20px;
+   width: 260px !important;
+   min-height: 118px !important;
+}
+
+.channeles-slider__item:not(:last-child) {
+   margin-right: 27px;
+}
